@@ -1,0 +1,7 @@
+features,model,feature_count,pr_auc_mean,pr_auc_std,roc_auc_mean,roc_auc_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std
+raw,Logistic Regression,23,0.2227,0.01588,0.67475,0.00543,0.2023,0.00697,0.58824,0.05234,0.3007,0.01277
+engineered,Random Forest,51,0.21659,0.00261,0.67909,0.01339,0.19444,0.14164,0.01471,0.01201,0.02728,0.02207
+engineered,Logistic Regression,51,0.21176,0.01803,0.66158,0.00705,0.19858,0.00592,0.52941,0.0208,0.28876,0.00836
+raw,Random Forest,23,0.2107,0.00886,0.67822,0.00583,0.16667,0.2357,0.0049,0.00693,0.00952,0.01347
+raw,Histogram Gradient Boosting,23,0.19433,0.02664,0.63867,0.02375,0.21766,0.06054,0.18627,0.05923,0.20062,0.06018
+engineered,Histogram Gradient Boosting,51,0.18698,0.01563,0.62908,0.01809,0.22893,0.0298,0.16667,0.01834,0.19285,0.02279

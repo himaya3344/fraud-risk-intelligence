@@ -1,0 +1,5 @@
+rank_test_score,mean_test_score,std_test_score,params
+1,0.23945856945813856,0.019411858809555663,"{'model__class_weight': None, 'model__C': 0.1}"
+2,0.22945001829301812,0.015490436976662685,"{'model__class_weight': None, 'model__C': 1.0}"
+3,0.22916569426960653,0.01699867178487569,"{'model__class_weight': 'balanced', 'model__C': 0.1}"
+4,0.22155859046600926,0.015686384669948636,"{'model__class_weight': 'balanced', 'model__C': 10.0}"

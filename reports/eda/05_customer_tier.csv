@@ -1,0 +1,5 @@
+customer_tier,transactions,fraud_cases,fraud_rate_pct
+Basic,906,126,13.907284768211921
+Platinum,251,30,11.952191235059761
+Gold,534,62,11.610486891385769
+Silver,709,73,10.296191819464035

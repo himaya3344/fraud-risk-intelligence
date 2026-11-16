@@ -1,0 +1,5 @@
+policy,n_transactions,approved,reviewed,blocked,review_share,legitimate_reviewed,legitimate_blocked,legit_block_rate,fraud_approved,fraud_reviewed,fraud_blocked,fraud_flagged,flagged_fraud_recall,flagged_precision,expected_review_fraud_stops,expected_total_fraud_stops,total_cost_cu
+Frozen 3-way policy,600,472,117,11,0.195,92,8,0.015180265654648957,45,25,3,28,0.3835616438356164,0.21875,20.0,23.0,10668.365
+Approve all,600,600,0,0,0.0,0,0,0.0,73,0,0,0,0.0,0.0,0.0,0.0,15073.35
+Binary 0.50 (block positive),600,592,0,8,0.0,0,6,0.011385199240986717,71,0,2,2,0.0273972602739726,0.25,0.0,2.0,14822.639
+Review at 0.50 (never block),600,592,8,0,0.013333333333333334,6,0,0.0,71,2,0,2,0.0273972602739726,0.25,1.6,1.6,14811.646

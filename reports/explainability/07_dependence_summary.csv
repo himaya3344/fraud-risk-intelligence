@@ -1,0 +1,3 @@
+feature_x,feature_y,min_mean_probability,max_mean_probability,range_probability_points,figure,warning
+new_device,distance_from_usual_location_km,0.10021627621404919,0.2048476793969335,0.1046314031828843,05_new_device_x_distance_dependence.png,Not a causal interaction or explicit learned log-odds interaction; other variables held from sampled TRAIN rows
+merchant_risk_score,transaction_amount,0.08274899505310848,0.1715572515833711,0.08880825653026261,06_amount_x_merchant_risk_dependence.png,Not a causal interaction or explicit learned log-odds interaction; other variables held from sampled TRAIN rows

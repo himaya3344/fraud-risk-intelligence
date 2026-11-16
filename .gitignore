@@ -1,5 +1,35 @@
+
 .venv/
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
+
+.env
+.env.*
+!.env.example
+
 models/*.joblib
+
+data/raw/
+data/processed/
+
+day01_backup.ipynb
+diary/
+*.tmp
+*.log
+
+reports/05_policy_predictions.csv
+reports/final_evaluation/01_held_out_test_predictions.csv
+
+
+# Individual transaction predictions and explanations
+reports/calibration_selection_predictions.csv
+reports/explainability/03_five_transaction_feature_contributions.csv
+reports/explainability/04_five_transaction_explanations_summary.csv
+reports/explainability/transaction_*_explanation.png
+
+# Data split records and detailed quality issues
+reports/modeling_split_manifest.csv
+reports/split_manifest.csv
+reports/data_quality_issues.csv
+

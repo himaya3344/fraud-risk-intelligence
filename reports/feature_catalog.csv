@@ -1,0 +1,29 @@
+feature,feature_type,definition,source_columns
+amount_log1p,Amount normalization,"log(1 + transaction amount), if amount >= 0",transaction_amount
+amount_per_recent_24h_tx,Amount normalization,amount / (1 + transaction count in previous 24 hours),transaction_amount; transactions_last_24h
+amount_per_recent_1h_tx,Amount normalization,amount / (1 + transaction count in previous hour),transaction_amount; transactions_last_1h
+velocity_1h_share,Velocity ratio,last_1h / (1 + last_24h),transactions_last_1h; transactions_last_24h
+velocity_24h_minus_1h,Velocity difference,last_24h - last_1h (negative values need investigation),transactions_last_24h; transactions_last_1h
+distance_log1p,Distance transform,log(1 + km from usual location),distance_from_usual_location_km
+night_transaction,Time-window indicator,"1 if hour is 22-23 or 00-05, else 0 (local-time assumption)",hour
+hour_sin,Cyclic time,sin(2*pi*hour/24),hour
+hour_cos,Cyclic time,cos(2*pi*hour/24),hour
+day_of_week_sin,Cyclic time,sin(2*pi*day_of_week/7),day_of_week
+day_of_week_cos,Cyclic time,cos(2*pi*day_of_week/7),day_of_week
+account_device_age_gap,Behavioral proxy,account age in days - device age in days,account_age_days; device_age_days
+device_to_account_age_ratio,Behavioral proxy,device age / (1 + account age),device_age_days; account_age_days
+failed_login_chargeback_total,Security history,failed logins in last 24h + prior chargebacks,failed_logins_24h; prior_chargebacks
+risk_score_mean,Risk combination,(merchant risk + IP risk) / 2,merchant_risk_score; ip_risk_score
+risk_score_product,Risk combination,merchant risk * IP risk,merchant_risk_score; ip_risk_score
+risk_score_abs_gap,Risk combination,absolute difference between merchant risk and IP risk,merchant_risk_score; ip_risk_score
+new_device_x_distance,Interaction,new-device flag * location distance,new_device; distance_from_usual_location_km
+amount_x_merchant_risk,Interaction,transaction amount * merchant risk,transaction_amount; merchant_risk_score
+failed_logins_x_ip_risk,Interaction,failed logins in last 24h * IP risk,failed_logins_24h; ip_risk_score
+new_device_x_address_mismatch,Interaction,new-device flag * billing address mismatch,new_device; billing_address_mismatch
+no_auth_x_new_device,Interaction,1 when authentication is 'None' AND device is new,authentication_level; new_device
+auth_channel_pair,Categorical interaction,authentication level + channel (one row-level category),authentication_level; channel
+missing_transaction_amount,Missingness indicator,1 if transaction amount missing,transaction_amount
+missing_distance,Missingness indicator,1 if distance missing,distance_from_usual_location_km
+missing_merchant_risk,Missingness indicator,1 if merchant risk missing,merchant_risk_score
+missing_ip_risk,Missingness indicator,1 if IP risk missing,ip_risk_score
+missing_login_minutes,Missingness indicator,1 if minutes since login missing,login_to_transaction_minutes

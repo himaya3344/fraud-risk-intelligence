@@ -1,0 +1,11 @@
+column,missing,transactions,fraud_rate_percent
+transaction_amount,False,2947,12.18
+transaction_amount,True,53,9.43
+distance_from_usual_location_km,False,2925,12.31
+distance_from_usual_location_km,True,75,5.33
+merchant_risk_score,False,2940,12.31
+merchant_risk_score,True,60,3.33
+ip_risk_score,False,2955,12.15
+ip_risk_score,True,45,11.11
+login_to_transaction_minutes,False,2940,12.14
+login_to_transaction_minutes,True,60,11.67

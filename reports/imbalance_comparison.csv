@@ -1,0 +1,4 @@
+method,n_folds,fold_only_resampling,pr_auc_mean,pr_auc_std,roc_auc_mean,roc_auc_std,precision_at_050_mean,precision_at_050_std,recall_at_050_mean,recall_at_050_std,f1_at_050_mean,f1_at_050_std
+No class weighting,3,False,0.23946,0.01941,0.68197,0.01164,0.30556,0.03928,0.01471,0.0,0.02804,0.00018
+Balanced class weights,3,False,0.22917,0.017,0.68161,0.00816,0.20578,0.01119,0.58333,0.01834,0.30402,0.0128
+Training-fold random oversampling,3,True,0.22914,0.01695,0.67677,0.00803,0.20074,0.00666,0.57353,0.03177,0.29706,0.00681

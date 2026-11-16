@@ -1,0 +1,49 @@
+{
+  "model_family": "Logistic Regression",
+  "feature_mode": "raw",
+  "features": [
+    "hour",
+    "day_of_week",
+    "transaction_amount",
+    "distance_from_usual_location_km",
+    "transactions_last_1h",
+    "transactions_last_24h",
+    "account_age_days",
+    "failed_logins_24h",
+    "prior_chargebacks",
+    "device_age_days",
+    "merchant_risk_score",
+    "ip_risk_score",
+    "email_age_days",
+    "login_to_transaction_minutes",
+    "card_presence",
+    "channel",
+    "country",
+    "device_type",
+    "merchant_category",
+    "authentication_level",
+    "new_device",
+    "billing_address_mismatch",
+    "customer_tier"
+  ],
+  "seed": 42,
+  "training_rows": 1680,
+  "training_fraud": 204,
+  "cv_folds": 3,
+  "cv_selection_metric": "average_precision (PR-AUC)",
+  "cv_tuning_best_pr_auc": 0.23945856945813856,
+  "best_params": {
+    "model__class_weight": null,
+    "model__C": 0.1
+  },
+  "partitions": {
+    "calibration": 360,
+    "policy": 360,
+    "test": 600,
+    "train": 1680
+  },
+  "calibration_done": false,
+  "policy_thresholds_selected": false,
+  "final_test_evaluated": false,
+  "prediction_note": "This pipeline expects the selected columns in the processed dataset; if engineered features are selected, apply src/feature_engineering.py transformations before predicting."
+}

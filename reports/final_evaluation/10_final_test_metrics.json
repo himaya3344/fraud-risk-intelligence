@@ -1,0 +1,82 @@
+{
+  "evaluation_scope": "one-time final test; no fitting/tuning/threshold optimization",
+  "test_rows": 600,
+  "fraud_rows": 73,
+  "model_family": "Logistic Regression",
+  "feature_mode": "raw",
+  "calibration_method": "sigmoid",
+  "selected_thresholds_from_policy_only": {
+    "review": 0.17180172331090549,
+    "block": 0.4404225000024769
+  },
+  "ranking_and_calibration": {
+    "roc_auc": 0.6647604689246446,
+    "pr_auc_average_precision": 0.21914800471901494,
+    "brier_score": 0.10438733861076187,
+    "log_loss": 0.3554727760596556,
+    "fraud_prevalence": 0.12166666666666667
+  },
+  "binary_at_0_50": {
+    "threshold": 0.5,
+    "accuracy": 0.8716666666666667,
+    "precision": 0.25,
+    "recall": 0.0273972602739726,
+    "f1": 0.04938271604938271,
+    "tp": 2,
+    "fp": 6,
+    "tn": 521,
+    "fn": 71,
+    "predicted_fraud": 8
+  },
+  "flag_at_frozen_review_cutoff": {
+    "threshold": 0.17180172331090549,
+    "accuracy": 0.7583333333333333,
+    "precision": 0.21875,
+    "recall": 0.3835616438356164,
+    "f1": 0.27860696517412936,
+    "tp": 28,
+    "fp": 100,
+    "tn": 427,
+    "fn": 45,
+    "predicted_fraud": 128
+  },
+  "frozen_3_way_policy": {
+    "n_transactions": 600,
+    "approved": 472,
+    "reviewed": 117,
+    "blocked": 11,
+    "review_share": 0.195,
+    "legitimate_reviewed": 92,
+    "legitimate_blocked": 8,
+    "legit_block_rate": 0.015180265654648957,
+    "fraud_approved": 45,
+    "fraud_reviewed": 25,
+    "fraud_blocked": 3,
+    "fraud_flagged": 28,
+    "flagged_fraud_recall": 0.3835616438356164,
+    "flagged_precision": 0.21875,
+    "expected_review_fraud_stops": 20.0,
+    "expected_total_fraud_stops": 23.0,
+    "total_cost_cu": 10668.365
+  },
+  "approve_all_cost_cu": 15073.35,
+  "base_policy_cost_difference_vs_approve_all_cu": 4404.985000000001,
+  "base_policy_cost_saving_fraction": 0.29223662954817614,
+  "hypothetical_cost_assumptions": {
+    "fraud_loss_multiplier": 1.0,
+    "fraud_extra_loss": 30.0,
+    "review_cost": 8.0,
+    "legit_review_friction": 3.0,
+    "review_fraud_capture": 0.8,
+    "legit_block_fixed": 15.0,
+    "legit_block_fraction": 0.1,
+    "fraud_block_handling": 1.0
+  },
+  "constraints_from_frozen_policy": {
+    "max_review_share": 0.25,
+    "max_legitimate_block_rate": 0.02
+  },
+  "operating_constraint_warnings": [],
+  "business_costs_are_observed": false,
+  "frozen_model_and_policy_unchanged": true
+}
